@@ -8,27 +8,34 @@ var specialChar = ["@","#","$","%","<","^","<","!",":",";","?","{","}","+",",","
 
 var combinedArray = ["A,","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","@","#","$","%","<","^","<","!",":",";","?","+",",","*"]; 
 
+function checkInput(){
+  var amount = totalChars.value;
+  if (isNaN(amount))
+  {
+    alert("Must be a number")
+  }
+}
 
 
 // Write password to the #password input
-
 function writePassword() {
-  totalChars = parseInt(prompt("How many characters between 8 and 128 do you need?"));
-  if ( totalChars < 8 || totalChars > 128) {
-   totalChars = parseInt(prompt("Must be between 8 and 128"))
-} else {
-  hasNumber = confirm("Does your password need numbers?");
-  hasCharacter = confirm("Does your password need Special Characters?");
-  hasUppercase = confirm("Does your password need Uppercase letters?");
-  hasLowercase = confirm("Does your password need Lowercase letters?");
+  var totalChars = parseInt(prompt("How many characters between 8 and 128 do you need?"));
+  checkInput() {
+    if (parseInt(totalChars) < 8 || (parseInt(totalChars) > 128) {
+   alert("Must be between 8 and 128");
+}  else {
+  yesNumber = confirm("Does your password need numbers?");
+  yesCharacter = confirm("Does your password need Special Characters?");
+  yesUppercase = confirm("Does your password need Uppercase letters?");
+  yesLowercase = confirm("Does your password need Lowercase letters?");
 };
 
-if (hasNumber && hasCharacter && hasUppercase && hasLowercase) {
+if (yesNumber && yesCharacter && yesUppercase && yesLowercase) {
   
 
 }
 
-
+ 
 
 
 
