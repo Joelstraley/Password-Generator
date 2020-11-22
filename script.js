@@ -6,6 +6,7 @@ var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P"
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"] 
 var specialChar = ["@","#","$","%","<","^","<","!",":",";","?","{","}","+",",","*"]
 
+var numChars;
 var password = "";
 var nextChar;
 
@@ -16,7 +17,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
+ 
 }
 
 
@@ -38,61 +39,19 @@ if (yesLowercase) {
 } if (yesUppercase) {
   combinedArray.concat(upperCase);
 } if (yesNumbers) {
-  combinedArray.concat(numbers)
+  combinedArray.concat(numbers);
 } if (yesSpecialChar) {
-  combinedArray.concat(specialChar)    
+  combinedArray.concat(specialChar);    
 } else {
   alert("You confirmed no value types");
 };
 
 for (var i = 0; i < numChars-1; i++) {
-  nextChar = Math.floor(Math.random() * combinedArray.length);
+  nextChar = combinedArray[Math.floor(Math.random() * combinedArray.length)];
   password.concat(nextChar);
-}; password = [];
-console.log(password)
-}
-
-
+} 
+} 
 //var passLength = ///use another Math.random that uses the min and max for the interval
-  
-/* for (var i = 0; i < numChars-1; i++) {
-  nextChar = Math.floor(Math.random(combinedArray));
-  password.concat(nextChar);
-}
-
-  */
-
-
-
-
-  
-// else { 
-//  var numChars = confirm("Do you want the password to include numbers?");
-
-
-
-
-//function generatePassword(){
- // } else {
-   // return confirm("Do you want the password to include numbers?");
-     
-//if (hasSpecialChars) {
-//    combinedArray.concat(specialChar);
-//}
-
-//if (hasUppercase) {
-//   combinedArray.concat(upperCase);
-//}
-
-//var passLength = //use another Math.random that uses the min and the max for the interval
-
-//for (var i = 0; i < numChars-1; i++) {
-//   nextChar = mathFloor(Math.random(...nextChar.combinedArray));
-//  password.concat(nextChar);
-//}
-
-//}
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
