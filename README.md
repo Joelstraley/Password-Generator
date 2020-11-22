@@ -14,6 +14,7 @@ Repository contains the following:
 * -README.md
 
 ## Screenshots
+![alt text](https://github.com/Joelstraley/Password-Generator/blob/main/Screenshot.png)
 
 
 ## Contributor: 
