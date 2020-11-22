@@ -6,46 +6,47 @@ var capitals = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
 var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"] 
 var specialChar = ["@","#","$","%","<","^","<","!",":",";","?","{","}","+",",","*"]
 
-var combinedArray = ["A,","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","@","#","$","%","<","^","<","!",":",";","?","+",",","*"]; 
+var password = "";
 
-function checkInput(){
-  var amount = totalChars.value;
-  if (isNaN(amount))
-  {
-    alert("Must be a number")
-  }
-}
-
+var combinedArray = [];
+var totalChars = "";
 
 // Write password to the #password input
 function writePassword() {
-  var totalChars = parseInt(prompt("How many characters between 8 and 128 do you need?"));
-  checkInput() {
-    if (parseInt(totalChars) < 8 || (parseInt(totalChars) > 128) {
-   alert("Must be between 8 and 128");
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+
+function generatePassword() {
+  var numChars = parseInt(prompt("How many characters between 8 and 128 do you need?"));
+    if (!numChars) {
+      alert("Must be a number")
+    } else if (numChars < 8 || numChars > 128) {
+      alert("Must be between 8 and 128");
 }  else {
-  yesNumber = confirm("Does your password need numbers?");
-  yesCharacter = confirm("Does your password need Special Characters?");
-  yesUppercase = confirm("Does your password need Uppercase letters?");
-  yesLowercase = confirm("Does your password need Lowercase letters?");
+  var yesNumber = confirm("Does your password need numbers?");
+  var yesCharacter = confirm("Does your password need Special Characters?");
+  var yesUppercase = confirm("Does your password need Uppercase letters?");
+  var yesLowercase = confirm("Does your password need Lowercase letters?");
 };
 
 if (yesNumber && yesCharacter && yesUppercase && yesLowercase) {
   
 
-}
-
- 
-
-
+} 
 
 }
+
+
 
   
 // else { 
 //  var numChars = confirm("Do you want the password to include numbers?");
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
+
 
 
 
@@ -72,4 +73,4 @@ if (yesNumber && yesCharacter && yesUppercase && yesLowercase) {
 
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
