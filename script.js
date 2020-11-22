@@ -7,15 +7,14 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 var specialChar = ["@","#","$","%","<","^","<","!",":",";","?","{","}","+",",","*"]
 
 var password = "";
+var nextChar;
 
 var combinedArray = [];
-var totalChars = "";
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
@@ -42,11 +41,19 @@ if (yesLowercase) {
   combinedArray.concat(numbers)
 } if (yesSpecialChar) {
   combinedArray.concat(specialChar)    
-} console.log(combinedArray)
-
+} else {
+  alert("You confirmed no value types");
 };
 
-var passLength = ///use another Math.random that uses the min and max for the interval
+for (var i = 0; i < numChars-1; i++) {
+  nextChar = Math.floor(Math.random() * combinedArray.length);
+  password.concat(nextChar);
+}; password = [];
+console.log(password)
+}
+
+
+//var passLength = ///use another Math.random that uses the min and max for the interval
   
 /* for (var i = 0; i < numChars-1; i++) {
   nextChar = Math.floor(Math.random(combinedArray));
